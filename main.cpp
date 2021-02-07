@@ -16,14 +16,20 @@ int main() {
                     contTotalPrintedPar--;
                     countPar = 0;
                 }
+                for (int k = 0; k<5; k++){
+                    par[k]=0;
+                }
+                par[countPar] = number;
+                countPar++;
             } else {
                 par[countPar] = number;
                 countPar++;
-                if (countPar == 4){
+                if (countPar == 5){
                     parFull = true;
                 }
             }
-        } else {
+        }
+        if (number%2 != 0) {
             contTotalPrintedImpar++;
             if (imparFull){
                 imparFull = false;
@@ -32,10 +38,15 @@ int main() {
                     contTotalPrintedImpar--;
                     countImpar = 0;
                 }
+                for (int k = 0; k<5; k++){
+                    impar[k]=0;
+                }
+                impar[countImpar] = number;
+                countImpar++;
             } else {
                 impar[countImpar] = number;
                 countImpar++;
-                if (countImpar == 4){
+                if (countImpar == 5){
                     imparFull = true;
                 }
             }
